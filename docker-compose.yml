@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  static-site:
+    build:
+      context: .
+      dockerfile: Dockerfile 
+    image: under_construction_website
+    container_name: static_site_container
+    ports:
+      - "80:80"
+    restart: unless-stopped
